@@ -1,0 +1,6 @@
+.weatherData {
+  width: 435px;
+  height: 514px;
+  border-radius: 30px;
+  background: var(--weatherBg) 0% 0% no-repeat padding-box;;
+}

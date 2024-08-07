@@ -1,5 +1,17 @@
-.weatherApp{
-    background-color: var(--mainBg);
-    min-height: 100vh;
-    display: flex;
+.weatherApp {
+  background-color: var(--mainBg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.weatherDataBg {
+  background: var(--secondaryBg);
+  width: 669px;
+  height: 660px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

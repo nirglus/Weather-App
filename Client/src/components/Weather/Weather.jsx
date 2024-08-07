@@ -1,6 +1,7 @@
+import styles from "./Weather.module.css";
 function Weather() {
   return (
-    <main>
+    <main className={styles.weatherApp}>
       Our weather application
     </main>
   )

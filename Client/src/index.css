@@ -13,3 +13,8 @@
   --paragraphColor: #707070;
   --button: #046B3B;
 }
+
+body{
+  padding: 0;
+  margin: 0;
+}

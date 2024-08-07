@@ -1,0 +1,5 @@
+.weatherApp{
+    background-color: var(--mainBg);
+    min-height: 100vh;
+    display: flex;
+}

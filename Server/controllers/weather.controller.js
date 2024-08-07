@@ -1,14 +1,14 @@
 const { fetchWeather } = require("../utils/fetchWeather");
 
-const getWeather = async (req, res) => {
+const getWeather = async (req, res, next) => {
     const city = req.params.city;
     try {
-        const apiKey = process.env.API_KEY; 
+        const apiKey = process.env.API_KEY;
         const data = await fetchWeather(city, apiKey);
         res.send(data);
-    } catch (error) {
-        res.status(400).send(error);
+    } catch (err) {
+        next(err);
     }
-}
+};
 
-module.exports = { getWeather }
+module.exports = { getWeather };

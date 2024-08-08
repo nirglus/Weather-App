@@ -2,5 +2,103 @@
   width: 435px;
   height: 514px;
   border-radius: 30px;
-  background: var(--weatherBg) 0% 0% no-repeat padding-box;;
+  background: var(--weatherBg) 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.location {
+  text-align: center;
+  line-height: 2px;
+  margin-top: 30px;
+}
+
+.city {
+  color: var(--weatherHeading);
+  font-size: 26px;
+}
+
+.country {
+  color: var(--timeColor);
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.currentDate {
+  color: var(--timeColor);
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 30px;
+}
+.currentTemp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.currentDegree {
+  color: var(--input);
+  font-size: 130px;
+  font-weight: 500;
+  letter-spacing: -16.9px;
+  position: relative;
+  margin: 0;
+}
+
+.currentDegree::after {
+  content: "\00B0";
+  position: absolute;
+  bottom: 20px;
+}
+
+.currentCondition {
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--weatherHeading);
+  margin-top: -60px;
+}
+
+.weatherStats {
+  display: flex;
+  text-align: center;
+  width: 90%;
+  justify-content: space-evenly;
+  line-height: 10px;
+  font-size: 20px;
+}
+
+.weatherStatsHeading {
+  color: var(--weatherHeading);
+  font-weight: 300;
+}
+
+.weatherStatsData {
+  color: var(--input);
+  font-weight: 500;
+}
+
+.hourTemp {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  text-align: center;
+  line-height: 5px;
+}
+
+.hour {
+  color: var(--timeColor);
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.temp {
+  position: relative;
+  color: var(--input);
+}
+
+.temp::after {
+  content: "\00B0";
+  position: absolute;
+  bottom: 2px;
 }

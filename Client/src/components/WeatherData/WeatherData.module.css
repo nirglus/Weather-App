@@ -41,7 +41,7 @@
   color: var(--input);
   font-size: 130px;
   font-weight: 500;
-  letter-spacing: -16.9px;
+  letter-spacing: -13.9px;
   position: relative;
   margin: 0;
 }
@@ -56,7 +56,8 @@
   font-size: 30px;
   font-weight: 300;
   color: var(--weatherHeading);
-  margin-top: -60px;
+  margin-top: -55px;
+  text-transform: lowercase;
 }
 
 .weatherStats {

@@ -12,6 +12,8 @@
   --timeColor: #A8C6CB;
   --paragraphColor: #707070;
   --button: #046B3B;
+  --buttonHover: #02512c;
+  --error: rgb(204, 7, 7);
 }
 
 body{

@@ -1,0 +1,54 @@
+.input label {
+  margin-left: 10px;
+  color: var(--paragraphColor);
+}
+
+.inputWrapper {
+  width: 431px;
+  height: 63px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 10px;
+  background-color: var(--input);
+}
+
+.inputWrapper input {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.inputWrapper button {
+  position: absolute;
+  border: 0;
+  width: 95px;
+  height: 36px;
+  right: 4%;
+  border-radius: 10px;
+  background-color: var(--button);
+  color: var(--input);
+  transition: 0.1s;
+}
+
+.inputWrapper button:hover {
+  cursor: pointer;
+  background-color: var(--buttonHover);
+}
+
+.inputWrapper button:active {
+  transform: translateY(2px);
+}
+
+.errorInput {
+  border: 2px solid var(--error) !important;
+}
+
+.errorMsg {
+  color: var(--error);
+  margin-left: 10px;
+}

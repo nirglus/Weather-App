@@ -1,0 +1,11 @@
+.latInfo {
+    color: var(--paragraphColor);
+    margin-left: 49px;
+    line-height: 10px;
+    font-weight: 300;
+}
+
+.latitLongit {
+    display: flex;
+    justify-content: space-between;
+}

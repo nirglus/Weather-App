@@ -2,6 +2,7 @@ import WeatherData from "../WeatherData/WeatherData";
 import Input from "../Input/Input";
 import styles from "./Weather.module.css";
 import logo from "/logo.svg";
+import LatInfo from "../LatInfo/LatInfo";
 
 function Weather() {
   return (
@@ -14,6 +15,7 @@ function Weather() {
           </p>
           <Input label="City name" buttonTxt="Check" />
         </div>
+        <LatInfo />
       </section>
       <aside className={styles.weatherAppRight}>
         <WeatherData />

@@ -3,6 +3,8 @@
     margin-left: 49px;
     line-height: 10px;
     font-weight: 300;
+    min-width: 227px;
+    min-height: 68px;
 }
 
 .latitLongit {

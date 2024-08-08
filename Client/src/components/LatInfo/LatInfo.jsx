@@ -2,7 +2,7 @@ import styles from "./LatInfo.module.css";
 import { formatDate } from "../../utils/formatDate";
 
 function LatInfo({ weatherData }) {
-  if (!weatherData) return null;
+  if (!weatherData) return <div className={styles.latInfo}></div>;
 
   const { lat, lon } = weatherData.location;
   const { localtime } = weatherData.location;

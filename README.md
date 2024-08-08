@@ -54,16 +54,18 @@ API_KEY = (contact me for the key)
 API_BASE_URL = http://api.weatherapi.com/v1
 ```
 ### 4. Run the Application
-Client:
+
+Open two integrated terminals to run the client and server separately:
+### Terminal 1: Run the Client
 
 ```bash
 cd Client
 npm run dev
 ```
-Server:
+### Terminal 2: Run the Server
 
 ```bash
-cd ../Server
+cd Server
 npm start
 ```
 

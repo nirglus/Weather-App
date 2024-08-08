@@ -81,6 +81,7 @@ Your application should now be running locally! 🎉
 
 - Node.js
 - Express
+- WeatherAPI
 
 ## 📜 License
 This project is licensed under the MIT License.

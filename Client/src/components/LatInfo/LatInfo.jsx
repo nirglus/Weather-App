@@ -1,12 +1,45 @@
 import styles from "./LatInfo.module.css";
 
-function LatInfo() {
-  return (
-    <div className={styles.latInfo}>
-      <p className={styles.latitLongit}><span>latitude 32.07</span> <span>longitude 34.76</span></p>
-      <p>accurate to 13/02/2022 at 16:24</p>
-    </div>
-  )
+function formatDate(dateString) {
+  const date = new Date(dateString);
+
+  const optionsDate = {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  };
+
+  const optionsTime = {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  };
+
+  const formattedDate = new Intl.DateTimeFormat("en-GB", optionsDate).format(
+    date
+  );
+  const formattedTime = new Intl.DateTimeFormat("en-GB", optionsTime).format(
+    date
+  );
+
+  return `${formattedDate} at ${formattedTime}`;
 }
 
-export default LatInfo
+function LatInfo({ weatherData }) {
+  if (!weatherData) return null;
+
+  const { lat, lon } = weatherData.location;
+  const { localtime } = weatherData.location;
+
+  return (
+    <div className={styles.latInfo}>
+      <p className={styles.latitLongit}>
+        <span>latitude {lat}</span>
+        <span>longitude {lon}</span>
+      </p>
+      <p>accurate to {formatDate(localtime)}</p>
+    </div>
+  );
+}
+
+export default LatInfo;

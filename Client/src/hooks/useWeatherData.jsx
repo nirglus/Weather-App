@@ -1,34 +1,29 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState, useCallback } from "react";
+import axios from "axios";
 
 const useWeatherData = () => {
-  const [city, setCity] = useState('');
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    if (city.trim() === '') { 
-      setWeatherData(null);
-      setError('City name is required');
-      return;
-    }
-
-    const fetchWeather = async () => {
+  const fetchWeather = useCallback(async (city) => {
+    if (city.trim()) {
       try {
-        const apiUrl = import.meta.env.VITE_API_URL; 
+        const apiUrl = import.meta.env.VITE_API_URL;
         const res = await axios.get(`${apiUrl}/${city}`);
         setWeatherData(res.data);
+        console.log(res.data);
+
         setError(null);
       } catch (err) {
         setWeatherData(null);
-        setError(err.res?.data?.error || 'Error fetching weather data');
+        setError(err.response?.data?.error || "Error fetching weather data");
       }
-    };
+    } else {
+      setError("City name cannot be empty");
+    }
+  }, []);
 
-    fetchWeather();
-  }, [city]);
-
-  return { weatherData, error, setCity };
+  return { weatherData, error, fetchWeather };
 };
 
 export default useWeatherData;

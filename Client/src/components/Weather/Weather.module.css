@@ -36,3 +36,9 @@
   align-items: center;
   justify-content: center;
 }
+
+.weatherAppRightNoData {
+  background: var(--mainBg);
+  width: 669px;
+  height: 660px;
+}
